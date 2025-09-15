@@ -32,6 +32,10 @@
             <groupId>dev.ikm.ike</groupId>
             <artifactId>rocks-kb</artifactId>
         </dependency>
+        <dependency>
+            <groupId>dev.ikm.tinkar</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
 
         <!-- Logging during plugin execution -->
         <dependency>
