@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>ike-maven-plugin</artifactId>
-    <name>IKE Maven plugin</name>
+    <name>IKE Maven plugin ${project.version}</name>
     <packaging>maven-plugin</packaging>
     <description>Placeholder Maven plugin module for IKE (no goals defined yet).</description>
 
