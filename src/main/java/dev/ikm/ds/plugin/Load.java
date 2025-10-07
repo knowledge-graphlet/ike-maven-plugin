@@ -1,6 +1,6 @@
 package dev.ikm.ds.plugin;
 
-import dev.ikm.ds.rocks.RocksImportTask;
+import dev.ikm.ds.rocks.tasks.ImportProtobufTask;
 import dev.ikm.ds.rocks.RocksProvider;
 import dev.ikm.tinkar.common.service.ServiceKeys;
 import dev.ikm.tinkar.common.service.ServiceProperties;
@@ -15,7 +15,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Mojo(name = "load")
-public class LoadMojo extends AbstractMojo {
+public class Load extends AbstractMojo {
 
     /**
      * Path to a Tinkar protobuf ZIP file to import (e.g. tink-*.zip)
@@ -69,7 +69,7 @@ public class LoadMojo extends AbstractMojo {
             RocksProvider provider = new RocksProvider();
             try {
                 getLog().info("Importing entities from: " + importFile.getAbsolutePath());
-                RocksImportTask importTask = new RocksImportTask(importFile, provider, watchList);
+                ImportProtobufTask importTask = new ImportProtobufTask(importFile, provider, watchList);
                 importTask.compute();
                 provider.save();
                 getLog().info("Import complete.");

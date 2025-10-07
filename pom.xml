@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.1.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd">
     <modelVersion>4.1.0</modelVersion>
 
     <parent>
@@ -11,8 +9,9 @@
     </parent>
 
     <artifactId>ike-maven-plugin</artifactId>
-    <name>IKE Maven plugin</name>
     <packaging>maven-plugin</packaging>
+
+    <name>IKE Maven plugin</name>
     <description>Placeholder Maven plugin module for IKE (no goals defined yet).</description>
 
     <dependencies>
@@ -30,7 +29,7 @@
         <!-- Use the rocks-kb implementation in this reactor -->
         <dependency>
             <groupId>dev.ikm.ike</groupId>
-            <artifactId>rocks-kb</artifactId>
+            <artifactId>rocks-kb-engine</artifactId>
         </dependency>
         <dependency>
             <groupId>dev.ikm.tinkar</groupId>
@@ -57,17 +56,17 @@
                     <dependency>
                         <groupId>org.ow2.asm</groupId>
                         <artifactId>asm</artifactId>
-                        <version>9.8</version>
+                        <version>9.9</version>
                     </dependency>
                     <dependency>
                         <groupId>org.ow2.asm</groupId>
                         <artifactId>asm-commons</artifactId>
-                        <version>9.8</version>
+                        <version>9.9</version>
                     </dependency>
                     <dependency>
                         <groupId>org.ow2.asm</groupId>
                         <artifactId>asm-tree</artifactId>
-                        <version>9.8</version>
+                        <version>9.9</version>
                     </dependency>
                 </dependencies>
                 <executions>
