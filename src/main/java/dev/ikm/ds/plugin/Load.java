@@ -66,7 +66,7 @@ public class Load extends AbstractMojo {
 
         try {
             // Open Rocks provider (like RocksNewController.start())
-            RocksProvider provider = new RocksProvider();
+            RocksProvider provider = RocksProvider.get();
             try {
                 getLog().info("Importing entities from: " + importFile.getAbsolutePath());
                 ImportProtobufTask importTask = new ImportProtobufTask(importFile, provider, watchList);
